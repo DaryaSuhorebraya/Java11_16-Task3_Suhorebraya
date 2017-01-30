@@ -12,14 +12,15 @@ public class Main {
         ServiceFactory serviceFactory=ServiceFactory.getInstance();
         AnalyzerService analyzerService=serviceFactory.getAnalyzerService();
         try {
+
             //read consequentially
 
             analyzerService.setFilePath("src/com/dasha/analyzer/resource/notes");
-           Node node;
+            Node node;
             int i=1;
             while ((node=analyzerService.next(i))!=null){
-                i++;
                 System.out.println(node.getType()+" "+node.getContent());
+                i++;
             }
 
 

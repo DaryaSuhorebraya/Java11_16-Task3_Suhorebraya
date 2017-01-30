@@ -10,6 +10,6 @@ public interface AnalyzerService {
 
     void setFilePath(String filePath) throws ServiceException;
     Node getNode(int nodeNumber) throws ServiceException;
-    Node next(int i) throws ServiceException;
+    Node next(int nodeIndex) throws ServiceException;
     void nextWithRegEx() throws ServiceException;
 }
